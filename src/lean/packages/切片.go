@@ -14,6 +14,7 @@ var identifier []type
 func main() {
 	s := []int{1, 2, 3}
 	ss := s[:] //copy 把元素指针复制
+
 	fmt.Println(&ss[1])
 	fmt.Println(&s[1])
 	ss2 := s[1:2]

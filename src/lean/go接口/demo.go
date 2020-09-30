@@ -5,15 +5,20 @@ import (
 )
 
 func main() {
-	var car Car = new(BtCar)
+	car := new(BtCar)
 	car.dirve()
-	car = new(FtCar)
-	car.dirve()
-	car = new(Dog)
-	car.dirve()
+	fcar := new(FtCar)
+	fcar.dirve()
+	fcar.fix()
+
+}
+
+type Tool interface {
+	fix()
 }
 
 type Car interface {
+	Tool
 	dirve()
 }
 
@@ -25,6 +30,9 @@ func (v BtCar) dirve() {
 }
 func (v FtCar) dirve() {
 	fmt.Println("开丰田")
+}
+func (v FtCar) fix() {
+	fmt.Println("修丰田")
 }
 
 type Dog struct {
