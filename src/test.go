@@ -1,24 +1,24 @@
 package main
 
 import (
-	"fmt"
 	"./myMath"
+	"fmt"
 )
 
-func init(){
+func init() {
 	fmt.Println("init")
 }
 
-func main()  {
+func main() {
 	fmt.Println("hellop")
-	var  i int = mathClazz.Add(1,1)
+	var i int = mathClazz.Add(1, 1)
 	fmt.Println(i)
 }
 
-func one(){
+func one() {
 
 }
 
-func tow(v string){
+func tow(v string) {
 	fmt.Println(v)
 }
